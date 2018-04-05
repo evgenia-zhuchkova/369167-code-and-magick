@@ -59,7 +59,6 @@ var BAR_COLOR = 'rgba(16, 55, 233, ' + getRandomOpacity(0.1, 1) + ')';
 var getColorBar = function (gamer) {
   return gamer === 'Вы' ? BAR_COLOR_YOUSELF : BAR_COLOR;
 };
- 
 window.renderStatistics = function (ctx, players, times) {
   renderCloud(ctx, CLOUD_X + GAP, CLOUD_Y + GAP, 'rgba(0, 0, 0, 0.7)');
   renderCloud(ctx, CLOUD_X, CLOUD_Y, '#ffffff');
@@ -71,6 +70,6 @@ window.renderStatistics = function (ctx, players, times) {
     ctx.fillStyle = '#000000';
     ctx.fillText(Math.floor(times[i]), BAR_X + (BAR_WIDTH + BAR_GAP) * i, BAR_Y + BAR_HEIGHT - BAR_HEIGHT * times[i] / maxTime - TEXT_GAP / 2);
     ctx.fillStyle = '#000000';
-    ctx.fillText(players[i], BAR_X + (BAR_WIDTH + BAR_GAP) * i, BAR_Y + BAR_HEIGHT + TEXT_GAP);  
-  }  
+    ctx.fillText(players[i], BAR_X + (BAR_WIDTH + BAR_GAP) * i, BAR_Y + BAR_HEIGHT + TEXT_GAP);
+  }
 };
